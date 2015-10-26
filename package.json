@@ -1,0 +1,9 @@
+{
+  "name": "cozy-tutorial-static",
+  "version": "0.0.1",
+  "description": "An application to get you started with web app development and Cozy.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mycozycloud/cozy-tutorial.git"
+  }
+}
