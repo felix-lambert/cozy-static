@@ -4,6 +4,7 @@
 	"description": "An application to get you started with web app development and Cozy.",
 	"cozy-type": "static",
 	"icon-path": "main_icon.png",
+	"author": "lemelon",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mycozycloud/cozy-tutorial.git"
