@@ -1,46 +1,85 @@
 {
-  "name": "cozy-blog",
-  "version": "0.0.1",
-  "displayName": "Blog example",
-  "description": "A blog that demonstrates how static apps work.",
-  "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
-  "licenses": [
-    {
-      "type": "AGPL v3",
-      "url": "http://www.gnu.org/licenses/agpl-3.0.html"
-    }
-  ],
+  "name": "kresus",
+  "version": "0.5.4",
   "engines": [
-    "node = 0.10.x"
+    "node = 0.8.x"
   ],
+  "description": "Kresus' Personal Finance Manager",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lemelon/cozy-static.git"
+    "url": "https://github.com/bnjbvr/kresus"
   },
+  "main": "client/main.js",
+  "dependencies": {
+    "americano": "0.4.0",
+    "async": "0.2.10",
+    "babel-runtime": "^5.8.20",
+    "babelify": "~6.1.3",
+    "browserify": "~11.0.1",
+    "coffee-script": "^1.9.3",
+    "cozy-db-pouchdb": "0.0.13",
+    "cozy-i18n-helper": "0.0.4",
+    "cozy-notifications-helper": "1.0.2",
+    "cozydb": "0.0.20",
+    "jade": "1.3.0",
+    "moment": "2.5.1",
+    "nock": "0.27.2",
+    "path-extra": "~1.0.2",
+    "printit": "^0.1.3",
+    "request-json": "0.4.8"
+  },
+  "devDependencies": {
+    "coffeelint": "1.1.0",
+    "cozy-fixtures": "1.1.0",
+    "mocha": "1.18.2",
+    "onchange": "^2.0.0",
+    "should": "3.1.4",
+    "watchify": "^3.3.1"
+  },
+  "scripts": {
+    "start": "node build/server.js",
+    "postinstall": "./scripts/build.sh",
+    "dev": "./scripts/dev.sh"
+  },
+  "bin": {
+    "kresus": "bin/kresus.js"
+  },
+  "cozy-displayName": "Kresus",
   "cozy-permissions": {
-    "Alarm": {
-      "description": "Creates and edits your alarms."
+    "Bank": {
+      "description": "Les banques auxquelles vous pouvez accéder via l'application."
     },
-    "Event": {
-      "description": "Creates and edits your events."
+    "BankAccess": {
+      "description": "Vos identifiants d'accès à votre banque sont stockés de façon sécurisée."
     },
-    "User": {
-      "description": "Used to recover your timezone"
+    "BankAccount": {
+      "description": "Vos différents comptes bancaires."
+    },
+    "BankOperation": {
+      "description": "Une opération bancaire."
+    },
+    "BankAlert": {
+      "description": "Une alerte liée à vos comptes bancaires."
+    },
+    "BankCategory": {
+      "description": "Categories des operations bancaires."
+    },
+    "send mail to user": {
+      "description": "A votre demande, des rapports journaliers, hebdomadaires ou mensuels peuvent vous être envoyés par email."
+    },
+    "Notification": {
+      "description": "Des notifications sont créées lorsque des alertes sont mises en place dans l'application."
     },
     "CozyInstance": {
-      "description": "Used to recover your language setting and your cozy's domain"
+      "description": "Afin d'afficher le contenu dans votre langue, l'application doit accéder à vos préférences."
     },
-    "Contact": {
-      "description": "Invite your contacts to an event"
+    "KresusConfig": {
+      "description": "Une paire de clé-valeur pour sauvegarder des éléments de configuration de Kresus."
     },
-    "Tag": {
-      "description": "Create new tags and change their color"
-    },
-    "send mail from user": {
-      "description": "Send invitations by mail"
-    },
-    "WebDAVAccount": {
-      "description": "Store webDAV password and sync informations"
+    "operationtype": {
+      "description": "Un type d'opération bancaire"
     }
   }
 }
+
