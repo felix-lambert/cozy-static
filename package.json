@@ -1,5 +1,5 @@
 {
-  "name": "Blog",
+  "name": "cozy-blog",
   "version": "0.0.1",
   "displayName": "Blog example",
   "description": "A blog that demonstrates how static apps work.",
