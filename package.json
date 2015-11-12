@@ -1,13 +1,46 @@
 {
-	"name": "cozy-static",
-	"version": "0.0.1",
-	"description": "An application to get you started with web app development and Cozy.",
-	"cozy-type": "static",
-	"cozy-displayName": "Static app example",
-	"icon-path": "main_icon.png",
-	"author": "lemelon",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mycozycloud/cozy-tutorial.git"
-	}
+  "name": "Blog",
+  "version": "0.0.1",
+  "displayName": "Blog example",
+  "description": "A blog that demonstrates how static apps work.",
+  "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
+  "licenses": [
+    {
+      "type": "AGPL v3",
+      "url": "http://www.gnu.org/licenses/agpl-3.0.html"
+    }
+  ],
+  "engines": [
+    "node = 0.10.x"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lemelon/cozy-static.git"
+  },
+  "cozy-permissions": {
+    "Alarm": {
+      "description": "Creates and edits your alarms."
+    },
+    "Event": {
+      "description": "Creates and edits your events."
+    },
+    "User": {
+      "description": "Used to recover your timezone"
+    },
+    "CozyInstance": {
+      "description": "Used to recover your language setting and your cozy's domain"
+    },
+    "Contact": {
+      "description": "Invite your contacts to an event"
+    },
+    "Tag": {
+      "description": "Create new tags and change their color"
+    },
+    "send mail from user": {
+      "description": "Send invitations by mail"
+    },
+    "WebDAVAccount": {
+      "description": "Store webDAV password and sync informations"
+    }
+  }
 }
